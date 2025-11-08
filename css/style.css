@@ -3,10 +3,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 :root{
-    --primary-colour: #FFDB3A;
+    --primary-colour: #f0cb25;
     --secondary-colour: #000000;
     --default-colour: #ffffff;
-    --basic-colour: #888888;
+    --basic-colour: #484848;
     --bg-colour: #FAFAFA;
 
     --fontfamily-1: "Inter", sans-serif;
@@ -28,6 +28,36 @@ body{
     background-color: var(--bg-colour) !important;
 }
 
+.pf_btn1{
+    background-color: var(--secondary-colour);
+    color:var(--default-colour);
+    font-size: clamp(14px, 1rem, 16px);
+    padding:12px 24px;
+    border:1px solid #000000;
+    border-radius: 50px;
+    transition:0.4s;
+    font-weight: 400;
+}
+.pf_btn1:hover{
+    background-color: var(--default-colour);
+    color:var(--secondary-colour);
+}
+.pf_btn2{
+    background-color: var(--default-colour);
+    color:var(--basic-colour);
+    font-size: 16px;
+    padding:10px 24px;
+    border:1px solid #000000;
+    border-radius: 50px;
+    transition:0.4s;
+    font-weight: 400;
+}
+.pf_btn2:hover{
+    background-color: var(--secondary-colour);
+    color:var(--default-colour);
+}
+
+
 /* ========== header style ========== */
 
 header{
@@ -41,6 +71,7 @@ header{
     left:50%;
     transform: translate(-50%);
     top:2%;
+    z-index:9;
 }
 .navbar{
     padding:0 !important;
@@ -87,8 +118,75 @@ header{
 }
 .navbar-toggler:focus{
     outline:0 !important;
+    border:none;
+    box-shadow: 0px 3px 6px #d5d5d5 !important;
 }
 
+/* ========== hero style ========== */
+
+.hero_content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0px auto;
+    width:60%;
+    padding-top:10%;
+}
+.profile_pic img{
+    width:200px;
+    height:200px;
+    border-radius: 100px;
+    box-shadow: 0px 0px 30px var(--primary-colour);
+    filter: grayscale(100%);
+    transition: 0.4s;
+    cursor:pointer;
+}
+.profile_pic img:hover,
+.profile_pic img:focus{
+    filter: none;
+}
+.pf_btn2{
+    display:flex;
+    align-items: center;
+    margin:30px 0px;
+}
+.pf_btn2 .circle{
+    width:10px;
+    height:10px;
+    background: rgb(20, 221, 20);
+    margin-right:10px;
+    border-radius: 20px;
+    animation: glowPulse 1.5s infinite ease-in-out;
+}
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 5px rgb(20, 221, 20), 0 0 10px rgb(20, 221, 20);
+    opacity: 1;
+    transform: scale(1);
+    width:10px;
+    height:10px;
+  }
+  50% {
+    box-shadow: 0 0 15px rgb(10, 128, 10), 0 0 30px rgb(20, 221, 20);
+    opacity: 0.5;
+    transform: scale(1.2);
+    width:8px;
+    height:8px;
+  }
+  100% {
+    box-shadow: 0 0 5px rgb(20, 221, 20), 0 0 10px rgb(20, 221, 20);
+    opacity: 1;
+    transform: scale(1);
+    width:10px;
+    height:10px;
+  }
+}
+.pf_btn2 span{
+    font-family: var(--fontfamily-2) !important;
+}
+
+/* ========== media query style ========== */
 
 @media screen and (min-width:1900px) {
         header{
@@ -114,14 +212,20 @@ header{
         header{
             width:77%;
         }
+        .hero_content{
+            padding-top:20%;
+        }
 }
 @media screen and (min-width:787px) and (max-width:991px){
         header{
             width:90%;
         }
         .nav-link{
-                padding:10px 10px !important;
-            }
+            padding:10px 10px !important;
+        }
+        .hero_content{
+            padding-top:20%;
+        }
 }
 @media screen and (min-width:567px) and (max-width:786px){
         header{
@@ -130,6 +234,9 @@ header{
         .nav-link{
             padding:5px 10px !important;
             font-size: 14px !important;
+        }
+        .hero_content{
+            padding-top:18%;
         }
 }
 @media screen and (max-width:566px){
@@ -165,5 +272,9 @@ header{
         border-radius: 15px;
         color: var(--secondary-colour) !important;
         font-weight: 400 !important;
+    }
+    .pf_btn2{
+        font-size: 13px;
+        padding:8px 18px;
     }
 }
