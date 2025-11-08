@@ -1,0 +1,30 @@
+
+.pf_btn1{
+    background-color: var(--secondary-colour);
+    color:var(--default-colour);
+    font-size: clamp(14px, 1rem, 16px);
+    padding:12px 24px;
+    border:1px solid #000000;
+    border-radius: 50px;
+    transition:0.4s;
+    font-weight: 400;
+}
+.pf_btn1:hover{
+    background-color: var(--default-colour);
+    color:var(--secondary-colour);
+}
+.pf_btn2{
+    background-color: var(--default-colour);
+    color:var(--secondary-colour);
+    font-size: clamp(14px, 1rem, 16px);
+    padding:12px 24px;
+    border:1px solid #000000;
+    border-radius: 50px;
+    transition:0.4s;
+    font-weight: 400;
+}
+.pf_btn2:hover{
+    background-color: var(--secondary-colour);
+    color:var(--default-colour);
+}
+
