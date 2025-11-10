@@ -48,7 +48,7 @@ body{
     font-weight: 400;
 }
 .pf_btn1:hover{
-     box-shadow: 0px 0px 20px var(--primary-colour);
+    box-shadow: 0px 0px 20px var(--primary-colour);
 }
 .pf_btn2{
     background-color: var(--default-colour);
@@ -415,7 +415,7 @@ header{
             font-size: 32px;
         }
         .skill_tools{
-            gap:20px;
+            gap:14px;
         }
         .skill_tools img{
             width:40px;
@@ -441,7 +441,7 @@ header{
         border-radius: 15px;
     }
     .navbar ul {
-        width: 50%;
+        width: 90%;
         margin-top: 14%;
         background: var(--default-colour);
         border-radius: 20px;
@@ -490,7 +490,7 @@ header{
         font-size: 28px;
     }
     .skill_tools{
-        gap:20px;
+        gap:14px;
     }
     .skill_tools img{
         width:40px;
