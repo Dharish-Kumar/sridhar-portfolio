@@ -263,6 +263,57 @@ header{
     margin:20px 0px;
 }
 
+/* ========== recent works style ========== */
+
+.worksCS{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:50px auto;
+    padding:50px 0px;
+}
+.worksCS h1{
+    font-size: 42px;
+    text-align: center;
+    color: var(--secondary-colour);
+    margin:20px 0px;
+    font-weight: 600;
+}
+.worksEP{
+    margin:20px 0px;
+    padding:10px 0px;
+    width:100%;
+    height:200vh;
+}
+.scroll_items{
+    width:100%;
+    height:75vh;
+    position: relative;
+    overflow-y: auto;
+    scrollbar-width: none;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.scroll_items img{
+    width:60%;
+    position: sticky;
+    top:0;
+    transition: 1s;
+    margin:20px 0px;
+}
+.scroll_items img:nth-child(2) {
+    top:40px;
+}
+.scroll_items img:nth-child(3) {
+    top:80px;
+}
+.scroll_items img:nth-child(4) {
+    top:120px;
+}
+
 
 
 
@@ -277,6 +328,9 @@ header{
         }
         .about_content{
             width:40%;
+        }
+        .scroll_items img{
+            width:60%;
         }
 }
 @media screen and (min-width:1520px) and (max-width:1899px){
@@ -295,6 +349,12 @@ header{
         .about_content h1 {
             font-size: 42px;
         }
+        .worksCS h1 {
+            font-size: 42px;
+        }
+        .scroll_items img{
+            width:60%;
+        }
 }
 @media screen and (min-width:1360px) and (max-width:1519px){
         header{
@@ -311,6 +371,15 @@ header{
         }
         .about_content h1 {
             font-size: 42px;
+        }
+        .worksCS h1 {
+            font-size: 42px;
+        }
+        .scroll_items img{
+            width:60%;
+        }
+        .scroll_items{
+            height:60vh;
         }
 }
 @media screen and (min-width:1200px) and (max-width:1359px){
@@ -329,6 +398,15 @@ header{
         .about_content h1 {
             font-size: 40px;
         }
+        .worksCS h1 {
+            font-size: 40px;
+        }
+        .scroll_items img{
+            width:70%;
+        }
+        .scroll_items{
+            height:55vh;
+        }
 }
 @media screen and (min-width:992px) and (max-width:1199px){
         header{
@@ -346,6 +424,12 @@ header{
         }
         .skill_tools{
             gap:20px;
+        }
+        .scroll_items img{
+            width:70%;
+        }
+        .scroll_items{
+            height:50vh;
         }
 }
 @media screen and (min-width:787px) and (max-width:991px){
@@ -370,6 +454,15 @@ header{
         }
         .skill_tools{
             gap:20px;
+        }
+        .worksCS h1 {
+            font-size: 32px;
+        }
+        .scroll_items img{
+            width:80%;
+        }
+        .scroll_items{
+            height:45vh;
         }
 }
 @media screen and (min-width:567px) and (max-width:786px){
@@ -419,6 +512,15 @@ header{
         }
         .skill_tools img{
             width:40px;
+        }
+        .worksCS h1 {
+            font-size: 32px;
+        }
+        .scroll_items img{
+            width:90%;
+        }
+        .scroll_items{
+            height:40vh;
         }
 }
 @media screen and (max-width:566px){
@@ -494,5 +596,14 @@ header{
     }
     .skill_tools img{
         width:40px;
+    }
+    .worksCS h1 {
+        font-size: 28px;
+    }
+    .scroll_items img{
+        width:90%;
+    }
+    .scroll_items{
+        height:40vh;
     }
 }
