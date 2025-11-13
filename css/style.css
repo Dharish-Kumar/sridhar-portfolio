@@ -103,8 +103,9 @@ header{
     transition: 0.5s;
 }
 .nav-link:hover,
-.nav-link:focus{
-   background:var(--secondary-colour) !important;
+.nav-link:focus,
+.nav-link:active{
+    background:var(--secondary-colour) !important;
     border-radius: 50px;
     color: var(--default-colour) !important;
 }
@@ -273,6 +274,7 @@ header{
     align-items: center;
     margin:50px auto;
     padding:50px 0px;
+    
 }
 .worksCS h1{
     font-size: 42px;
@@ -285,14 +287,14 @@ header{
     margin:20px 0px;
     padding:10px 0px;
     width:100%;
-    height:200vh;
+    height:auto;
 }
 .scroll_items{
     width:100%;
     height:75vh;
-    position: relative;
     overflow-y: auto;
-    scrollbar-width: none;
+    position: relative;
+    scrollbar-width: 0px;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -314,12 +316,116 @@ header{
     top:120px;
 }
 
+/* ========== caurosel style ========== */
+
+#visualD_projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  flex-direction: column;
+}
+
+.visualD_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.scroll-arrow {
+    width:40px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    user-select: none;
+    background: #3d3d3d;
+    border-radius: 50px;
+    padding:10px;
+    color:#ffffff;
+}
+
+.scroll-arrow:hover {
+  opacity: 1;
+}
+
+#imgList {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#imgList::-webkit-scrollbar {
+  display: none;
+}
+
+#imgList li {
+  flex: 0 0 48%; /* Show 2 images at a time */
+  scroll-snap-align: center;
+  list-style: none;
+}
+
+#imgList img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+#imgList img:hover {
+  transform: scale(1.05);
+}
+#visualD_projects h1 {
+    font-size: 42px;
+    text-align: center;
+    color: var(--secondary-colour);
+    margin:0 0 50px 0;
+    font-weight: 600;
+}
+#visualD_projects h1>span {
+    color: gray;
+}
+
+/* ========== MobleUI style ========== */
+
+#MockupUI{
+    margin: 30px 0px;
+    padding: 30px 0;
+}
+#MockupUI h1 {
+    font-size: 42px;
+    text-align: center;
+    color: var(--secondary-colour);
+    margin:0 0 100px 0;
+    font-weight: 600;
+}
+#MockupUI marquee{
+    width:100%;
+    height:auto;
+}
+.mockupImage {
+    display: flex;
+}
+.mockupImage img{
+    width:300px;
+}
 
 
 
 /* ========== media query style ========== */
 
-@media screen and (min-width:1900px) {
+/* @media screen and (min-width:1900px) {
         header{
             width:46%;
         }
@@ -332,7 +438,7 @@ header{
         .scroll_items img{
             width:60%;
         }
-}
+} */
 @media screen and (min-width:1520px) and (max-width:1899px){
         header{
             width:50%;
@@ -354,6 +460,12 @@ header{
         }
         .scroll_items img{
             width:60%;
+        }
+        .scroll_items{
+            height:75vh;
+        }
+        .scroll_items img{
+            margin:20px;
         }
 }
 @media screen and (min-width:1360px) and (max-width:1519px){
@@ -379,7 +491,16 @@ header{
             width:60%;
         }
         .scroll_items{
-            height:60vh;
+            height:59vh;
+        }
+        .scroll_items img{
+            margin:15px;
+        }
+         #visualD_projects h1 {
+            font-size: 42px;
+        }
+        #MockupUI h1 {
+            font-size: 42px;
         }
 }
 @media screen and (min-width:1200px) and (max-width:1359px){
@@ -405,7 +526,19 @@ header{
             width:70%;
         }
         .scroll_items{
-            height:55vh;
+            height:63vh;
+        }
+        .scroll_items img{
+            margin:10px;
+        }
+         #visualD_projects h1 {
+            font-size: 40px;
+        }
+        #MockupUI h1 {
+            font-size: 40px;
+        }
+        .mockupImage img{
+            width:280px;
         }
 }
 @media screen and (min-width:992px) and (max-width:1199px){
@@ -429,9 +562,26 @@ header{
             width:70%;
         }
         .scroll_items{
-            height:50vh;
+            height:52vh;
+        }
+        .scroll_items img{
+            margin:10px;
+        }
+         #visualD_projects h1 {
+            font-size: 36px;
+        }
+        #MockupUI h1 {
+            font-size: 32px;
+        }
+        .mockupImage img{
+            width:250px;
+        }
+        #MockupUI{
+            margin: 20px 0px;
+            padding: 20px 0;
         }
 }
+
 @media screen and (min-width:787px) and (max-width:991px){
         header{
             width:90%;
@@ -462,7 +612,24 @@ header{
             width:80%;
         }
         .scroll_items{
-            height:45vh;
+            height:52vh;
+        }
+        .scroll_items img{
+            margin:10px;
+        }
+         #visualD_projects h1 {
+            font-size: 32px;
+        }
+        #MockupUI h1 {
+            font-size: 32px;
+             margin: 0 0 50px 0;
+        }
+        .mockupImage img{
+            width:200px;
+        }
+        #MockupUI{
+            margin: 15px 0px;
+            padding: 15px 0;
         }
 }
 @media screen and (min-width:567px) and (max-width:786px){
@@ -513,6 +680,10 @@ header{
         .skill_tools img{
             width:40px;
         }
+        .worksCS{
+            margin:0;
+            padding: 20px 0px;
+        }
         .worksCS h1 {
             font-size: 32px;
         }
@@ -520,7 +691,35 @@ header{
             width:90%;
         }
         .scroll_items{
-            height:40vh;
+            height:50vh;
+        }
+        .scroll_items img{
+            margin:0px;
+        }
+        #imgList li {
+            flex: 0 0 80%; /* Show 1.25 images on mobile */
+        }
+        .scroll-arrow {
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+        }
+        #imgList{
+            gap: 0;
+        }
+         #visualD_projects h1 {
+            font-size: 28px;
+        }
+        #MockupUI h1 {
+            font-size: 28px;
+             margin: 0 0 50px 0;
+        }
+        .mockupImage img{
+            width:150px;
+        }
+        #MockupUI{
+            margin: 10px 0px;
+            padding: 10px 0;
         }
 }
 @media screen and (max-width:566px){
@@ -597,6 +796,10 @@ header{
     .skill_tools img{
         width:40px;
     }
+    .worksCS{
+        margin:0;
+        padding: 20px 0px;
+    }
     .worksCS h1 {
         font-size: 28px;
     }
@@ -604,6 +807,43 @@ header{
         width:90%;
     }
     .scroll_items{
-        height:40vh;
+        height:31vh;
+    }
+    .scroll_items img{
+        margin:0px;
+    }
+    .scroll_items img:nth-child(2) {
+        top:20px;
+    }
+    .scroll_items img:nth-child(3) {
+        top:40px;
+    }
+    .scroll_items img:nth-child(4) {
+        top:20px;
+    }
+    #imgList li {
+        flex: 0 0 90%;
+    }
+    .scroll-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+    #imgList{
+        gap: 0;
+    }
+    #visualD_projects h1 {
+        font-size: 24px;
+    }
+    #MockupUI h1 {
+        font-size: 24px;
+        margin: 0 0 50px 0;
+    }
+    .mockupImage img{
+        width:150px;
+    }
+    #MockupUI{
+        margin: 10px 0px;
+        padding: 10px 0;
     }
 }
