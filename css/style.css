@@ -856,6 +856,10 @@ header .container{
         #tanhksSec h1{
             font-size: 32px;
         }
+        #MockupUI .heading h1 {
+            margin-top: 0px !important;
+            font-size: 60px !important;
+        }
 }
 
 @media screen and (min-width:787px) and (max-width:991px){
@@ -925,6 +929,10 @@ header .container{
         }
         #tanhksSec h1{
             font-size: 28px;
+        }
+        #MockupUI .heading h1 {
+            margin-top: 0px !important;
+            font-size: 50px !important;
         }
 }
 @media screen and (min-width:567px) and (max-width:786px){
@@ -1075,6 +1083,10 @@ header .container{
         .download{
             width:39% !important;
         }
+        #MockupUI .heading h1 {
+            margin-top: 0px !important;
+            font-size: 50px !important;
+        }
 }
 @media screen and (max-width:566px){
     .container, .container-sm {
@@ -1095,27 +1107,29 @@ header .container{
     }
     .nav-link{
         padding:5px 20px !important;
-        color: #454545 !important;
+        color: #ffffff !important;
         font-size: 14px !important;
     }
     .nav-link:hover,
     .nav-link:focus{
-        border-radius: 15px;
+        border-radius: 0px;
     }
     .navbar ul {
         width: 90%;
-        margin-top: 14%;
-        background: var(--default-colour);
-        border-radius: 20px;
-        float: right;
-        margin-right: 5%;
-        box-shadow: 0px 3px 6px #ececec;
+        margin-top: 13%;
+        background: #000000;
+        border-radius: 0px;
+        margin-right: 0%;
+        position: absolute;
+        right: 6%;
+        color:#ffffff;
+        padding: 10px 0;
     }
     .active {
         background: var(--primary-colour) !important;
-        border-radius: 15px;
-        color: var(--secondary-colour) !important;
-        font-weight: 400 !important;
+        border-radius: 0px;
+        color: var(--default-colour) !important;
+        font-weight: 600 !important;
     }
     .pf_btn2{
         font-size: 13px;
@@ -1253,5 +1267,9 @@ header .container{
     }
     .download{
         width:39% !important;
+    }
+    #MockupUI .heading h1 {
+        margin-top: 0px !important;
+        font-size: 50px !important;
     }
 }
