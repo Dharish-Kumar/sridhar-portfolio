@@ -7,3 +7,6 @@
 .ui_designs .heading h1{
     margin: 0 0 10% 0;
 }
+.ui_designs .heading{
+    margin: 200px auto 10px auto;
+}
