@@ -5,8 +5,8 @@
     width:100%;
 }
 .ui_designs .heading h1{
-    margin: 0 0 10% 0;
+    font-size: 72px !important;
 }
 .ui_designs .heading{
-    margin: 200px auto 10px auto;
+    margin: 200px auto 10% auto;
 }
