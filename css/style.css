@@ -33,7 +33,6 @@ body{
 }
 .pf_text{
     margin:10px 0;
-    padding:10px 0;
     color:var(--basic-colour);
     font-size: 18px;
     line-height: 32px;
@@ -74,14 +73,15 @@ body{
 header{
     background-color: var(--default-colour), 10;
     backdrop-filter: blur(15px);
-    width:100%;
-    border-radius:0px;
+    width: 60%;
+    border-radius: 99px;
     padding:10px 0px;
     position: fixed;
-    left:50%;
+    left: 50%;
     transform: translate(-50%);
-    top:0;
-    z-index:9;
+    top: 3%;
+    z-index: 9;
+    border: 1px solid lightgrey;
 }
 header .container{
     width:100%;
@@ -94,7 +94,7 @@ header .container{
 .logo h4{
     margin:0;
     padding:0;
-    color: var(--primary-colour);
+    color: var(--secondary-colour);
     font-weight: bold;
     letter-spacing: 5px;
 }
@@ -123,13 +123,13 @@ header .container{
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:active{
-    background:var(--default-colour) !important;
-    color: var(--primary-colour) !important;
+    background:var(--secondary-colour) !important;
+    color: var(--default-colour) !important;
     font-weight: 900;
 }
 .active{
-    background:var(--default-colour) !important;
-    color: var(--primary-colour) !important;
+    background:var(--secondary-colour) !important;
+    color: var(--default-colour) !important;
     font-weight: 900;
 }
 .navbar-toggler{
@@ -158,28 +158,20 @@ header .container{
     align-items: center;
     margin:0px auto;
     width:40%;
-    padding-top:10%;
+    padding-top:8%;
 }
 .profile_pic img{
     width:200px;
     height:200px;
     border-radius: 100px;
     border: 3px solid lightgrey;
-    filter: grayscale(100%);
     transition: 1s;
     cursor:pointer;
-}
-.profile_pic img:hover,
-.profile_pic img:focus{
-    filter: none;
-    border: 3px solid var(--primary-colour);
-    transition: 1s;
-    box-shadow: 0px 0px 30px var(--primary-colour);
 }
 .pf_btn2{
     display:flex;
     align-items: center;
-    margin:30px 0px;
+    margin:20px 0px;
 }
 .pf_btn2 .circle{
     width:10px;
@@ -304,7 +296,7 @@ header .container{
     display: flex;
     flex-direction: row;
     line-height:0;
-    margin:100px auto 40px auto;
+    margin:0 auto;
     width:100%;
     justify-content: center;
     align-items: center;
@@ -343,12 +335,17 @@ header .container{
     margin:0 auto;
     justify-content: center;
 }
-.scroll_items img{
+.scroll_items a{
     width:60%;
     position: sticky;
     top:0;
     transition: 1s;
-    margin:20px 0px;
+    margin:20px auto;
+    display: flex;
+
+}
+.scroll_items a img{
+    width:100%;
 }
 .scroll_items img:nth-child(2) {
     top:40px;
@@ -660,11 +657,14 @@ header .container{
     margin-top:50px;
     padding:10px 0px;
 }
-.footersec_row2 img{
+.footersec_row2 a{
     width: 33%;
 }
+.footersec_row2 a img{
+    width: 100%;
+}
 .download{
-    width:22% !important;
+    width:65% !important;
 }
 
 
@@ -686,7 +686,7 @@ header .container{
 } */
 @media screen and (min-width:1520px) and (max-width:1899px){
         header{
-            width:100%;
+            width:70%;
         }
         .hero_content{
             width:45%;
@@ -715,7 +715,7 @@ header .container{
 }
 @media screen and (min-width:1360px) and (max-width:1519px){
         header{
-            width:100%;
+            width:70%;
         }
         .hero_content{
             width:50%;
@@ -759,7 +759,7 @@ header .container{
 }
 @media screen and (min-width:1200px) and (max-width:1359px){
         header{
-            width:100%;
+            width:80%;
         }
         .hero_content{
             width:60%;
@@ -806,7 +806,7 @@ header .container{
 }
 @media screen and (min-width:992px) and (max-width:1199px){
         header{
-            width:100%;
+            width:90%;
         }
         .nav-link{
             margin:0px !important;
@@ -873,7 +873,7 @@ header .container{
 
 @media screen and (min-width:787px) and (max-width:991px){
         header{
-            width:100%;
+            width:90%;
         }
         .nav-link{
             padding:0px 5px !important;
@@ -955,6 +955,7 @@ header .container{
         header{
             width:100%;
             border: 0px;
+            top:0%;
         }
         .nav-link{
             padding: 0px !important;
@@ -1124,6 +1125,7 @@ header .container{
         box-shadow: none;
         border: 0px;
         padding:20px 0;
+        top:0%;
     }
     .logo {
         width: 50%;
@@ -1291,12 +1293,15 @@ header .container{
         flex-direction: column;
         align-items: start;
     }
-    .footersec_row2 img {
+    .footersec_row2 a {
         width: 50%;
         margin-left:20px;
     }
+    .footersec_row2 a img{
+        width: 100%;
+    }
     .download{
-        width:39% !important;
+        width:70% !important;
     }
     #MockupUI .heading h1 {
         margin-top: 20px !important;
