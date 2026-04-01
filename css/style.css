@@ -939,6 +939,9 @@ header .container{
          #MockupUI .marqueScroll {
             margin-top: 80px;
         }
+         .worksEP{
+            width:100%;
+        }
 }
 @media screen and (min-width:567px) and (max-width:786px){
         header{
@@ -1102,6 +1105,21 @@ header .container{
         }
         #testimonial{
             margin: 10px auto;
+        }
+         .worksEP{
+            width:100%;
+        }
+        .worksEP .row{
+            flex-direction: column;
+            margin:0 0;
+        }
+        .worksEP .row a:nth-child(1){
+            width:90%;
+            margin:15px 0;
+        }
+        .worksEP .row a:nth-child(2){
+            width:90%;
+            margin:5px 0;
         }
 }
 @media screen and (max-width:566px){
@@ -1301,5 +1319,20 @@ header .container{
         }
         #testimonial{
                 margin: 10px auto;
+        }
+    .worksEP{
+        width:100%;
+    }
+    .worksEP .row{
+            flex-direction: column;
+            margin:0 0;
+        }
+        .worksEP .row a:nth-child(1){
+            width:90%;
+            margin:15px 0;
+        }
+        .worksEP .row a:nth-child(2){
+            width:90%;
+            margin:5px 0;
         }
 }
