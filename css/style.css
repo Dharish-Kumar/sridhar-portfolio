@@ -320,35 +320,30 @@ header .container{
 .worksEP{
     margin:20px 0px;
     padding:10px 0px;
-    width:100%;
-    height:auto;
+    width:80%;
 }
-.scroll_items{
-    width:100%;
-    height:75vh;
-    overflow-y: auto;
-    position: relative;
-    scrollbar-width: 0px;
-    display:flex;
-    flex-direction: column;
+.worksEP .row{
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    margin:25px 0;
 }
-.scroll_items img{
-    width:60%;
-    position: sticky;
-    top:0;
-    transition: 1s;
-    margin:20px 0px;
-
+.worksEP .row a{
+    scale: 1;
+    transition: 0.4s;
 }
-.scroll_items img:nth-child(2) {
-    top:40px;
+.worksEP .row a:hover{
+    scale: 1.03;
 }
-.scroll_items img:nth-child(3) {
-    top:80px;
+.worksEP .row a:nth-child(1){
+    width:50%;
 }
-.scroll_items img:nth-child(4) {
-    top:120px;
+.worksEP .row a:nth-child(2){
+    width:50%;
+}
+.worksEP .row a img{
+   width:100%
 }
 
 /* ========== caurosel style ========== */
